@@ -1,0 +1,126 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.formBox {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.12);
+    padding: 50px 45px;
+    width: 100%;
+    max-width: 650px;
+    border-top: 4px solid #2c3e50;
+}
+
+.formBox h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.formGroup {
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 12px 14px;
+    border: 1px solid #d5dbdd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #95a5a6;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #2c3e50;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.08);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 280px;
+}
+
+.formActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.formActions button {
+    flex: 1;
+    padding: 12px 24px;
+}
+
+@media (max-width: 768px) {
+    .formBox {
+        padding: 40px 30px;
+    }
+
+    .formBox h1 {
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+
+    .formGroup textarea {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formContainer {
+        padding: 15px;
+    }
+
+    .formBox {
+        padding: 30px 20px;
+    }
+
+    .formBox h1 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .formActions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .formGroup {
+        margin-bottom: 20px;
+    }
+
+    .formGroup textarea {
+        min-height: 150px;
+    }
+}
+
