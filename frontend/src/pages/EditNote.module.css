@@ -13,7 +13,7 @@
     box-shadow: 0 4px 15px rgba(44, 62, 80, 0.12);
     padding: 50px 45px;
     width: 100%;
-    max-width: 650px;
+    max-width: 800px;
     border-top: 4px solid #2c3e50;
 }
 
@@ -70,6 +70,105 @@
     min-height: 280px;
 }
 
+/* Tags Styling */
+.tagInputContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tagInputContainer input {
+    flex: 1;
+}
+
+.addTagBtn {
+    padding: 12px 14px;
+    border: 1px solid #d5dbdd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.addTagBtn:hover {
+    background-color: #e8edef;
+    border-color: #2c3e50;
+}
+
+.tagsDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #e8edef;
+    color: #2c3e50;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #d5dbdd;
+}
+
+.removeTagBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #2c3e50;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.removeTagBtn:hover {
+    color: #c0392b;
+}
+
+/* Color Picker Styling */
+.colorPicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.colorOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.colorOption input {
+    display: none;
+}
+
+.colorSwatch {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.colorOption input:checked + .colorSwatch {
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #2c3e50;
+}
+
+.colorSwatch:hover {
+    transform: scale(1.08);
+}
+
 .formActions {
     display: flex;
     gap: 12px;
@@ -105,6 +204,15 @@
     .formGroup textarea {
         min-height: 200px;
     }
+
+    .colorPicker {
+        gap: 8px;
+    }
+
+    .colorSwatch {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -114,6 +222,7 @@
 
     .formBox {
         padding: 30px 20px;
+        max-width: 100%;
     }
 
     .formBox h1 {
@@ -132,6 +241,15 @@
 
     .formGroup textarea {
         min-height: 150px;
+    }
+
+    .colorPicker {
+        gap: 6px;
+    }
+
+    .colorSwatch {
+        width: 35px;
+        height: 35px;
     }
 }
 

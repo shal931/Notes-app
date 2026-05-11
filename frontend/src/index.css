@@ -17,10 +17,9 @@ body{
   width: 100%;
 }
 
+/* Do not center the whole app vertically — App layout manages its own spacing */
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
 }
 
 .container{
@@ -61,7 +60,7 @@ body{
 }
 
 button{
-  background-color: purple;
+  background-color: rgb(149, 172, 230);
   border: none;
   font-size: 20px;
   color: white;
